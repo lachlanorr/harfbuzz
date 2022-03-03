@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.1)
 project(harfbuzz)
 
+if(NOT gaen_MINEXT)
 message(WARN "HarfBuzz has a Meson port and tries to migrate all the other build systems to it, please consider using it as we might remove our cmake port soon.")
+endif()
 
 ## Limit framework build to Xcode generator
 if (BUILD_FRAMEWORK)
